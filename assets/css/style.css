@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #1f2029;
+  font-weight: normal;
+  color: #fff;
+  padding-bottom: 100px;
+}
+
+/* Common Classes */
+.hide,
+.hideWs,
+.ShowWs {
+  cursor: pointer;
+  display: none;
+  /* Consider removing if not used */
+}
+
+.ShowWs {
+  display: block;
+}
+
+.space {
+  height: 80px;
+  width: 100%;
+  background-color: #f2f2f21b;
+  display: flex;
+  margin: 40px 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.row {
+  display: grid;
+  align-items: start;
+  gap: 20px;
+}
+
+/* Dropdown CSS */
+.dropdown {
+  display: none;
+}
+
+.dropdown.active {
+  display: block;
+}
+
+/* Table CSS */
+table.table td {
+  padding: 10px;
+}
+
+button {
+  background-color: #fff;
+  color: #1f2029;
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 40px;
+  height: 20px;
+}
+
+.row-table.active {
+  background-color: #f2f2f21c;
+}
+
+/* Menu CSS */
+.overlay,
+.custom-menu {
+  position: fixed;
+  top: 0;
+  z-index: 11px;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.active.overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.custom-menu {
+  background: #fff;
+  width: 250px;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.top-side {
+  transform: translateY(-100%);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.active.top-side {
+  transform: translateY(0%);
+}
+
+.left-side {
+  transform: translatex(-250px);
+  left: 0;
+}
+
+.active.left-side {
+  transform: translatex(0px);
+}
+
+.right-side {
+  transform: translateX(251px);
+  right: 0;
+}
+
+.active.right-side {
+  transform: translateX(0);
+}
+
+.custom-menu ul li {
+  list-style: none;
+}
+
+.custom-menu ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+.btn-close {
+  width: 40px;
+  height: 40px;
+  background-color: #f2f2f2;
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #1f2029;
+  border-radius: 100px;
+}

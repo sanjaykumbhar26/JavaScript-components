@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+.conatiner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -162,4 +167,110 @@ input[type="checkbox"] {
   cursor: pointer;
   color: #1f2029;
   border-radius: 100px;
+}
+
+
+/* select-dropdown */
+.custom-select {
+  position: relative;
+  width: 200px;
+  margin: 20px;
+}
+
+.selectlabel {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.placeholder {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.selected {
+  flex-grow: 1;
+}
+
+.close {
+  cursor: pointer;
+  color: #ff0000;
+}
+
+#selectDropDown {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#selectDropDown li {
+  background-color: #fff;
+}
+
+#selectDropDown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+#selectDropDown a:hover {
+  background-color: #f2f2f2;
+}
+
+.hide {
+  display: none;
+}
+
+.custom-select li {
+  list-style: none;
+}
+
+.custom-select li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.custom-select label {
+  cursor: pointer;
+}
+
+.custom-select .selectlabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom-select #selectDropDown {
+  display: none;
+}
+
+.custom-select #selectDropDown.active {
+  display: block;
+}
+
+.custom-select .close {
+  display: none;
+  cursor: pointer;
+}
+
+.custom-select .close.active {
+  display: block;
+}
+
+.placeholder.hidden {
+  display: none;
+}
+
+.selectted.hidden {
+  display: none;
 }

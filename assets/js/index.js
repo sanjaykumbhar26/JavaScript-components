@@ -168,3 +168,58 @@ $(document).ready(function () {
     }
   });
 });
+
+/// selectedOption
+$(document).ready(function () {
+  var selectLabel = $(".selectlabel");
+  var selectDropDown = $("#selectDropDown");
+  var downSelect = $("#downSelect");
+  var closeBtn = $(".close");
+  var selectedLabel = $(".selectlabel label.selectted");
+  var placeholder = $(".placeholder");
+  var hiddenClass = "hidden";
+  var activeClass;
+
+  selectLabel.on("click", function () {
+    selectDropDown.toggleClass("active");
+  });
+
+  $("#selectDropDown li a").on("click", function (e) {
+    e.preventDefault();
+    activeClass = $(this).attr("class");
+    updateSelectOptions();
+  });
+
+  closeBtn.on("click", function () {
+    resetSelectOptions();
+  });
+
+  function updateSelectOptions() {
+    downSelect.val(activeClass);
+    var options = downSelect.find("option");
+
+    options.each(function () {
+      var option = $(this);
+      if (option.val() === activeClass) {
+        option.show();
+        selectedLabel.text(option.val());
+        selectDropDown.removeClass("active");
+        closeBtn.addClass("active");
+        placeholder.addClass(hiddenClass);
+        $(".selectted").removeClass(hiddenClass);
+      } else {
+        option.hide();
+      }
+    });
+  }
+
+  function resetSelectOptions() {
+    closeBtn.removeClass("active");
+    downSelect.find("option").removeAttr("style");
+    downSelect[0].selectedIndex = 0;
+    placeholder.removeClass(hiddenClass);
+    selectDropDown.addClass("active");
+    $(".selectted").addClass(hiddenClass);
+  }
+});
+

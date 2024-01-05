@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript Components</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./dist/main.min.css" />
+</head>
+
+<body>
+  <div class="container m-auto">
+    <div class="p-4 grid  grid-cols-4 mb-8">
+      <div class="border p-4">
+        <!-- Header -->
+        <h1 class="bg-black text-xl font-bold uppercase p-4 pb text-center mb-2">select dropdown</h1>
+        <!-- menu -->
+        <div class="custom-select">
+          <div class="selectlabel">
+            <label class="placeholder uppercase"> select </label>
+            <label class="selectted"></label>
+            <span
+              class="close w-5 h-5 bg-white flex items-center justify-center text-black rounded-full justify-center">X</span>
+          </div>
+          <ul id="selectDropDown">
+            <li>
+              <a class="de" href="#">demo</a>
+            </li>
+            <li>
+              <a class="de2" href="#">demo</a>
+            </li>
+            <li>
+              <a class="de3" href="#">demo</a>
+            </li>
+          </ul>
+          <select class="hide" name="downSelect" id="downSelect">
+            <option value="de">de</option>
+            <option value="de2">de2</option>
+            <option value="de3">de3</option>
+          </select>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="border p-4">
+        <!-- Header -->
+        <h1 class="bg-black text-xl font-bold uppercase p-4 pb text-center mb-2">Menu</h1>
+        <!-- menu -->
+
+        <div class="flex gap-2 flex-wrap w-full text-center justify-center">
+          <button class="menu bg-white text-black px-4 py-2 rounded-sm" data-action="menu-left"> left menu</button>
+          <button class="menu bg-white text-black px-4 py-2 rounded-sm" data-action="menu-right"> right menu</button>
+          <button class="menu bg-white text-black px-4 py-2 rounded-sm" data-action="menu-top"> top menu</button>
+        </div>
+
+        <div class="overlay modal-overlay"></div>
+        <!-- left side bar -->
+        <div class="custom-menu mobile-menu left-side" data-modal-id="menu-left">
+          <span class="btn-close menu-close">X</span>
+          <ul>
+            <li>
+              <a class="menu text-black" href="#"> Home </a>
+            </li>
+            <li>
+              <a class="menu text-black" href="#"> About Us </a>
+            </li>
+            <li>
+              <a class="menu text-black" href="#"> Service </a>
+            </li>
+            <li>
+              <a class="menu text-black" href="#"> Contact </a>
+            </li>
+          </ul>
+        </div>
+        <!-- top side bar -->
+        <div class="custom-menu mobile-menu top-side m-auto left-0" data-modal-id="menu-top">
+          <span class="btn-close menu-close">X</span>
+          <ul class="text-center">
+            <li>
+              <a class="menu text-black" href="#"> Home </a>
+            </li>
+            <li>
+              <a class="menu text-black" href="#"> About Us </a>
+            </li>
+            <li>
+              <a class="menu text-black" href="#"> Service </a>
+            </li>
+            <li>
+              <a class="menu text-black" href="#"> Contact </a>
+            </li>
+          </ul>
+        </div>
+        <!-- right side bar -->
+        <div class="custom-menu mobile-menu right-side" data-modal-id="menu-right">
+          <span class="btn-close menu-close">X</span>
+          <ul>
+            <li>
+              <a class="menu text-black" href="#"> Home </a>
+            </li>
+            <li>
+              <a class="menu text-black" href="#"> About Us </a>
+            </li>
+            <li>
+              <a class="menu text-black" href="#"> Service </a>
+            </li>
+            <li>
+              <a class="menu text-black" href="#"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="border p-4">
+        <!-- Header -->
+        <h1 class="bg-black text-xl font-bold uppercase p-4 pb text-center mb-2">Dropdown</h1>
+        <!-- table -->
+        <!-- Dropdown -->
+        <div class="row">
+          <div>
+            <button data-id="btn1" class="button w-full bg-white text-black px-4 py-2 rounded-sm mb-2">DROPDOWN
+              1</button>
+            <div class="dropdown" id="btn1">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a
+                type
+                specimen
+                book. It has survived not only five centuriess
+              </p>
+            </div>
+          </div>
+          <div>
+            <button data-id="btn2" class="button  w-full bg-white text-black px-4 py-2 rounded-sm mb-2">DROPDOWN
+              2</button>
+            <div class="dropdown" id="btn2">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's
+                standard
+                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a
+                type
+                specimen
+                book. It has survived not only five centuriess
+              </p>
+            </div>
+          </div>
+          <div>
+            <button data-id="btn3" class="button w-full bg-white text-black px-4 py-2 rounded-sm mb-2">DROPDOWN
+              3</button>
+            <div class="dropdown" id="btn3">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's
+                standard
+                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a
+                type
+                specimen
+                book. It has survived not only five centuriess
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- -->
+      <div class="border p-4">
+        <!-- Header -->
+        <h1 class="bg-black text-xl font-bold uppercase p-4 pb text-center mb-2">DE</h1>
+        <!-- table -->
+      </div>
+    </div>
+
+
+    <div class="p-4 grid  grid-cols-1 mb-8">
+      <div class="border p-4">
+        <!-- Header -->
+        <h1 class="bg-black text-xl font-bold uppercase p-4 pb text-center mb-2">table</h1>
+        <!-- table -->
+        <table class="table w-full" id="table" border="1" cellpadding="10px">
+          <tr>
+            <td><input id="selectAll" type="checkbox"></input></td>
+            <td>Row 1 </td>
+            <td>Row 2</td>
+            <td><button class="delete-btn bg-white text-black px-4 py-2 rounded-sm hide ">delete</button></td>
+          </tr>
+          <tr class="row-table">
+            <td><input class="singleCheckbox" type="checkbox"></input></td>
+            <td>Col-1</td>
+            <td>Col-2</td>
+            <td>
+              <button class="add bg-white text-black px-4 py-2 rounded-sm" type="button">Add</button>
+              <button class="remove bg-white text-black px-4 py-2 rounded-sm" type="button">remove</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../js/custom.js"></script>
+</body>
+
+</html>
